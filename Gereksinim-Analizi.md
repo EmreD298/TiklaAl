@@ -23,4 +23,4 @@
 # Gereksinim Dağılımları
 
 1. [Emre Dursun'un Gereksinimleri](Emre-Dursun-Gereksinimler.md)
-2. [Grup Üyesi 2'nin Gereksinimleri](Grup-Uyesi-2/Grup-Uyesi-2-Gereksinimler.md)
+2. [Okan Ağcabay'ın Gereksinimleri](Okan-Ağcabay-Gereksinimler.md)
