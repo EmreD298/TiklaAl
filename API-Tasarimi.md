@@ -63,7 +63,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/User'
 
-  /auth/login:
+    /auth/login:
     post:
       summary: Giriş yapma
       description: Email ve şifre ile kullanıcı giriş yapar ve JWT token döner.
@@ -90,7 +90,7 @@ paths:
                   message:
                     type: string
 
-  /auth/logout:
+    /auth/logout:
     post:
       summary: Çıkış yapma
       description: Kullanıcının aktif oturumunu sonlandırır.
@@ -106,7 +106,7 @@ paths:
                   message:
                     type: string
 
-  /products:
+    /products:
     get:
       summary: Ürün listeleme
       description: Sistemdeki tüm ürünleri listeler
@@ -121,7 +121,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/Product'
 
-  /products/{productId}:
+    /products/{productId}:
     get:
       summary: Ürün detayı görme
       description: Seçilen ürünün detaylarını gösterir.
@@ -140,7 +140,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Product'
 
-  /products/search:
+    /products/search:
     get:
       operationId: searchProducts
       summary: Ürün arama
@@ -162,7 +162,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/Product'
 
-  /products/{productId}/comments:
+    /products/{productId}/comments:
     post:
       operationId: leaveComment
       summary: Yorum yapma
@@ -195,7 +195,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Comment'
 
-  /orders:
+    /orders:
     post:
       operationId: placeOrder
       summary: Sipariş oluşturma
@@ -222,7 +222,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Order'
                 
-  /orders/{userId}: 
+    /orders/{userId}: 
     get:
       operationId: getOrderHistory
       summary: Sipariş geçmişini görme
@@ -243,7 +243,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/Order'
 
-  /cart:
+    /cart:
     post: 
       summary: Sepete ürün ekleme
       description: Kullanıcının seçtiği ürünü alışveriş sepetine ekler.
@@ -271,7 +271,7 @@ paths:
                   message:
                     type: string
 
-  /cart/{productId}:
+    /cart/{productId}:
     delete:
       summary: Sepetten ürün silme
       description: Sepetteki ürünü kaldırır.
@@ -315,7 +315,7 @@ paths:
                   message:
                     type: string
 
-  /comments/{commentId}:
+    /comments/{commentId}:
     delete:
       operationId: removeComment
       summary: Yorum silme
@@ -330,7 +330,7 @@ paths:
         "204":
           description: Yorum silme başarılı
 
-  /favorites:
+    /favorites:
     post:
       operationId: addToFavorites
       summary: Favorilere ekleme
@@ -353,7 +353,7 @@ paths:
         "201":
           description: Ürün başarıyla favorilere eklendi
 
-  /favorites/{productId}:
+    /favorites/{productId}:
     delete:
       operationId: removeFromFavorites
       summary: Favorilerden silme
@@ -379,7 +379,7 @@ paths:
         "204":
           description: Ürün favorilerden silindi
 
-  /users/{userId}:
+     /users/{userId}:
     delete:
       summary: Kayıt silme
       description: Sepette bulunan ürünün miktarını değiştirir.
@@ -423,7 +423,7 @@ paths:
         "200":
           description: Profil başarıyla güncellendi
 
-components:
+    components:
   schemas:
     User:
       type: object
