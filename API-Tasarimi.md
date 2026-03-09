@@ -424,7 +424,7 @@ paths:
           description: Profil başarıyla güncellendi
 
     components:
-  schemas:
+    schemas:
     User:
       type: object
       description: Bir kullanıcı siteye kayıt oldu.
