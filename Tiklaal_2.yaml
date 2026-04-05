@@ -371,17 +371,18 @@ paths:
         "204":
           description: Ürün favorilerden silindi
 
-  /users/{userId}:
+  /users/{username}:
     delete:
       summary: Kayıt silme
-      description: Sepette bulunan ürünün miktarını değiştirir.
+      description: Kullanıcının hesabını kullanıcı adı üzerinden sistemden siler.
       operationId: deleteUserAccount
       parameters:
-        - name: userId
+        - name: username
           in: path
           required: true
           schema:
-            type: integer
+            type: string # Integer yerine String yaptık
+          description: Silinecek kullanıcının kullanıcı adı
       responses:
         "204":
           description: Kayıt silme başarılı
