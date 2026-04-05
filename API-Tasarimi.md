@@ -390,7 +390,7 @@ paths:
           in: path
           required: true
           schema:
-            type: string # Integer yerine String yaptık
+            type: string
           description: Silinecek kullanıcının kullanıcı adı
       responses:
         "204":
